@@ -79,7 +79,8 @@ TARGETS	= \
 	tapv1_bl \
 	smartap_pro_bl \
 	modalai_fc_v1_bl \
-	uvify_core_bl
+	uvify_core_bl \
+	codev_dp1000_bl
 
 all:	$(TARGETS) sizes
 
@@ -127,6 +128,9 @@ px4fmuv5_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 
 px4fmuv5x_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=PX4_FMU_V5X LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
+
+codev_dp1000_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
+	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=CODEV_DP1000 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
 
 mindpxv2_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f4 TARGET_HW=MINDPX_V2 LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
