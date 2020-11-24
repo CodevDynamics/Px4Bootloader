@@ -439,7 +439,7 @@
 # define BOOTLOADER_DELAY               5000
 # define INTERFACE_USB                  1
 # define INTERFACE_USART                1
-# define USBDEVICESTRING                "PX4 BL CODEV dp1000.x"
+# define USBDEVICESTRING                "PX4 BL CODEV BL"
 # define USBPRODUCTID                   0x0032
 # define BOOT_DELAY_ADDRESS             0x000001a0
 
@@ -457,17 +457,19 @@
 # define BOARD_LED_ON                   gpio_clear
 # define BOARD_LED_OFF                  gpio_set
 
-# define BOARD_USART                    UART4
+# define BOARD_USART                    UART7
 # define BOARD_USART_CLOCK_REGISTER     RCC_APB1ENR
-# define BOARD_USART_CLOCK_BIT          RCC_APB1ENR_UART4EN
+# define BOARD_USART_CLOCK_BIT          RCC_APB1ENR_UART7EN
 
-# define BOARD_PORT_USART               GPIOD
+# define BOARD_PORT_USART               GPIOE
 # define BOARD_PORT_USART_AF            GPIO_AF8
-# define BOARD_PIN_TX                   GPIO1
-# define BOARD_PIN_RX                   GPIO0
+# define BOARD_PIN_TX                   GPIO8
+# define BOARD_PIN_RX                   GPIO7
 # define BOARD_USART_PIN_CLOCK_REGISTER RCC_AHB1ENR
-# define BOARD_USART_PIN_CLOCK_BIT      RCC_AHB1ENR_GPIODEN
+# define BOARD_USART_PIN_CLOCK_BIT      RCC_AHB1ENR_GPIOEEN
 # define SERIAL_BREAK_DETECT_DISABLED   1
+# define USBMFGSTRING                   "Codev Dynamics"
+# define OVERRIDE_USART_BAUDRATE        500000
 
 /*
  * Uncommenting this allows to force the bootloader through
