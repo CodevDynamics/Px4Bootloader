@@ -61,7 +61,8 @@ board_init(void)
 #ifdef BOARD_FORCE_BL_PIN
 	rcc_peripheral_enable_clock(&BOARD_FORCE_BL_CLOCK_REGISTER, BOARD_FORCE_BL_CLOCK_BIT);
 
-	gpio_set(BOARD_FORCE_BL_PORT, BOARD_FORCE_BL_PIN);
+	// gpio_set(BOARD_FORCE_BL_PORT, BOARD_FORCE_BL_PIN);
+	gpio_clear(BOARD_FORCE_BL_PORT, BOARD_FORCE_BL_PIN);
 	gpio_set_mode(BOARD_FORCE_BL_PORT,
 		      GPIO_MODE_INPUT,
 		      BOARD_FORCE_BL_PULL,

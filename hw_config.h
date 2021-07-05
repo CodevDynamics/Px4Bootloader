@@ -471,6 +471,7 @@
 # define USBMFGSTRING                   "Codev Dynamics"
 # define OVERRIDE_USART_BAUDRATE        500000
 
+# define USE_VBUS_PULL_DOWN
 # define BOARD_POWER_PIN_OUT            GPIO5
 # define BOARD_POWER_PORT               GPIOC
 # define BOARD_POWER_CLOCK_REGISTER     RCC_AHB1ENR
